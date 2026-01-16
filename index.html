@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Rahi ❤️</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #000000, #8b0000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+  }
+
+  .card {
+    background: #111;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 0 30px rgba(255,0,0,0.4);
+  }
+
+  h1 {
+    color: #ff2f2f;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 17px;
+    margin-bottom: 25px;
+  }
+
+  button {
+    padding: 10px 22px;
+    margin: 8px;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .yes {
+    background: #ff2f2f;
+    color: white;
+  }
+
+  .no {
+    background: #333;
+    color: white;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card" id="card">
+  <h1>Hey Rahi 🖤</h1>
+  <p>Will you be my Valentine?</p>
+  <button class="yes" onclick="step2()">Yes ❤️</button>
+  <button class="no" onclick="step2()">Of course 🖤</button>
+</div>
+
+<script>
+function step2() {
+  document.getElementById("card").innerHTML = `
+    <h1>One more question 🖤</h1>
+    <p>Are you sure you love me…<br>or is love fading away?</p>
+    <button class="yes" onclick="step3()">I love you ❤️</button>
+    <button class="no" onclick="step3()">Love is forever 🖤</button>
+  `;
+}
+
+function step3() {
+  document.getElementById("card").innerHTML = `
+    <h1>Choose your gift 🎁</h1>
+    <p>Pick one, my love</p>
+    <button class="yes" onclick="gift1()">💌 Love Letter</button>
+    <button class="yes" onclick="gift2()">🏆 Sweetest Guy Award</button>
+    <button class="yes" onclick="gift3()">📜 3 Rules Pass</button>
+  `;
+}
+
+function gift1() {
+  document.getElementById("card").innerHTML = `
+    <h1>My Love Letter 💌</h1>
+    <p>
+      Rahi,<br><br>
+      Loving you feels easy, safe, and real.<br>
+      You’re my comfort and my favorite person.<br>
+      I choose you, every single day. ❤️
+    </p>
+    <button class="yes" onclick="final()">Continue ❤️</button>
+  `;
+}
+
+function gift2() {
+  document.getElementById("card").innerHTML = `
+    <h1>🏆 Award</h1>
+    <p>
+      This award goes to<br><br>
+      <strong>Rahi</strong><br><br>
+      For being the sweetest,<br>
+      kindest, most amazing guy ever 🖤❤️
+    </p>
+    <button class="yes" onclick="final()">Continue ❤️</button>
+  `;
+}
+
+function gift3() {
+  document.getElementById("card").innerHTML = `
+    <h1>📜 Special Pass</h1>
+    <p>
+      You get to make<br>
+      <strong>3 rules</strong><br>
+      that I must follow this year 😌❤️
+    </p>
+    <button class="yes" onclick="final()">Continue ❤️</button>
+  `;
+}
+
+function final() {
+  document.getElementById("card").innerHTML = `
+    <h1>I Love You 🖤❤️</h1>
+    <p>
+      I love you so much.<br><br>
+      Thank you for being there in my life.<br>
+      I’m so glad how we went from nowhere<br>
+      to being everything for each other.
+    </p>
+  `;
+}
+</script>
+
+</body>
+</html>
